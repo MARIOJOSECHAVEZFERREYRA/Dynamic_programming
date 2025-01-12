@@ -63,3 +63,21 @@ def cutRodMemoization(price):
 
 price = [1, 5, 8, 9]
 print(cutRodMemoization(price))
+
+"""
+cutRodRecur(4)
+    ├── cutRodRecur(3) + price[0] (corte de longitud 1)
+    │       ├── cutRodRecur(2) + price[0]
+    │       │       ├── cutRodRecur(1) + price[0]
+    │       │       │       ├── cutRodRecur(0) + price[0] -> 0
+    │       │       │       └── (resultado: 1, guardado en memo[0])
+    │       │       └── (resultado: 5, guardado en memo[1])
+    │       └── (resultado: 8, guardado en memo[2])
+    ├── cutRodRecur(2) + price[1] (corte de longitud 2)
+    │       └── (resultado ya memoizado: 5)
+    ├── cutRodRecur(1) + price[2] (corte de longitud 3)
+    │       └── (resultado ya memoizado: 1)
+    └── cutRodRecur(0) + price[3] (corte de longitud 4)
+            └── (resultado: 0)
+
+"""

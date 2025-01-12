@@ -1,16 +1,20 @@
-# This is a sample Python script.
+def encontrar_mayor(lista):
+    if not lista:  # Verificar que la lista no esté vacía
+        raise ValueError("La lista no puede estar vacía")
 
-# Press Ctrl+F5 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    # Verificar que todos los elementos sean de tipo int
+    for num in lista:
+        if type(num) is not int:
+            raise TypeError("Todos los elementos de la lista deben ser de tipo int")
 
+    mayor = lista[0]  # Asumimos que el primer elemento es el mayor
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
+    for num in lista[1:]:  # Recorremos el resto de los elementos
+        if num > mayor:  # Comparamos si el elemento actual es mayor
+            mayor = num
 
+    return mayor
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+# Prueba
+print(encontrar_mayor([3, 1, 4, 1, 5, 9, 2]))  # 9
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
