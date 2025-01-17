@@ -1,20 +1,15 @@
-def encontrar_mayor(lista):
-    if not lista:  # Verificar que la lista no esté vacía
-        raise ValueError("La lista no puede estar vacía")
+#pasos para realizar mi ejercicio
+#primer paso: entender como acceder a cada elemento de mi lista
+#segundo paso: entender como acceder a todos los elementos de mi lista
+#tercer paso: comparar cada elemento con los demas elementos
+#cuarto paso: encontrar elemento mas alto
 
-    # Verificar que todos los elementos sean de tipo int
-    for num in lista:
-        if type(num) is not int:
-            raise TypeError("Todos los elementos de la lista deben ser de tipo int")
+notas = [50,70,99,80,72]
+frutas = ['manzana', 'pera']
+for fruta in frutas:
+    fruta = fruta + "10" + 10
+    print(fruta)
 
-    mayor = lista[0]  # Asumimos que el primer elemento es el mayor
-
-    for num in lista[1:]:  # Recorremos el resto de los elementos
-        if num > mayor:  # Comparamos si el elemento actual es mayor
-            mayor = num
-
-    return mayor
-
-# Prueba
-print(encontrar_mayor([3, 1, 4, 1, 5, 9, 2]))  # 9
-
+for nota in notas: #para cada elemento en la lista notas
+    nota = nota + 10
+    print(nota)
