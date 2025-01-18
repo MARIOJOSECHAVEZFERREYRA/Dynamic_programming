@@ -12,6 +12,5 @@ class Solution:
             else:
                 return result + word2[n:]
 
-
 sol = Solution()
 print(sol.mergeAlternately("hello", "world"))
